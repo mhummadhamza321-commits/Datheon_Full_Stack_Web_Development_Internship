@@ -64,6 +64,3 @@ Every push to the connected GitHub branch can trigger a new deployment.
 └── README.md
 ```
 
-## License
-
-You may add a license if you want others to reuse the source code. Do not include a license unless you intend to grant those permissions.
