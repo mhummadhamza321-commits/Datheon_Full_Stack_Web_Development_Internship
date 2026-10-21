@@ -60,7 +60,7 @@ Every push to the connected GitHub branch can trigger a new deployment.
 ├── script.js
 ├── assets/
 │   ├── README.txt
-│   └── Muhammad-Hamza-CV.pdf  # add your own CV file
+│   └── Muhammad-Hamza-CV.pdf 
 └── README.md
 ```
 
