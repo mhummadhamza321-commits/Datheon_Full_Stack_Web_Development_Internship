@@ -51,12 +51,11 @@ Note: A key used in browser-side JavaScript is not fully secret. A production de
 
 ## Screenshots
 
-![alt text](assets/weather-dashboard.png)
-![alt text](assets/canada-weather-day.png)
-![alt text](assets/lahore-weather-night.png)
-![alt text](assets/spelling-mistake.png)
-![alt text](assets/weather-mobile.png)
-Add screenshots of the running application to `assets/screenshots/` and embed them here.
+![Weather Dashboard](./assets/weather-dashboard.png)
+![Canada Weather Day](./assets/canada-weather-day.png)
+![Lahore Weather Night](./assets/lahore-weather-night.png)
+![Spelling Mistake Example](./assets/spelling-mistake.png)
+![Weather Mobile View](./assets/weather-mobile.png)
 
 ## Author
 
