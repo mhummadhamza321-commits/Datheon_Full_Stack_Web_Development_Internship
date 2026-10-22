@@ -36,6 +36,7 @@ The project demonstrates practical skills in HTML5, CSS3, JavaScript ES6+, DOM m
 
 ```text
 Task-2/
+├── assets/
 ├── index.html
 ├── style.css
 ├── script.js
