@@ -1,0 +1,4 @@
+
+window.WEATHER_CONFIG = {
+    API_KEY: "YOUR_OPENWEATHER_API_KEY"
+};
