@@ -1,0 +1,590 @@
+/* =========================================
+   TASKFLOW - PRODUCTIVITY TRACKER
+   Task 2 | Datheon Internship
+========================================= */
+
+/* 1. Global Styles */
+:root {
+    --primary: #6c5ce7;
+    --primary-dark: #5541d7;
+    --primary-light: #f0edff;
+    --background: #f6f7fb;
+    --surface: #ffffff;
+    --text: #20243a;
+    --text-muted: #7b8197;
+    --border: #e8eaf2;
+    --success: #16a579;
+    --danger: #e05260;
+    --shadow: 0 8px 28px rgba(35, 39, 70, 0.05);
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(108, 92, 231, 0.25);
+    outline-offset: 2px;
+}
+
+.app-container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+/* 2. Header */
+.app-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--primary);
+    color: white;
+    font-size: 27px;
+    font-weight: 800;
+    box-shadow: 0 6px 15px rgba(108, 92, 231, 0.25);
+}
+
+.brand h1 {
+    font-size: 25px;
+    line-height: 1.3;
+    letter-spacing: -0.8px;
+}
+
+.brand p,
+.date-display {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.date-display {
+    text-align: right;
+}
+
+/* 3. Welcome Section */
+.welcome-section {
+    padding: 36px 0 26px;
+}
+
+.welcome-section h2 {
+    font-size: clamp(25px, 4vw, 34px);
+    letter-spacing: -1px;
+    margin-bottom: 5px;
+}
+
+.welcome-section p {
+    color: var(--text-muted);
+    font-size: 15px;
+}
+
+/* 4. Statistics Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.stat-card {
+    background: var(--surface);
+    padding: 23px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(35, 39, 70, 0.09);
+}
+
+.stat-card span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+/* 5. Main Panels */
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: var(--shadow);
+}
+
+.section-heading {
+    margin-bottom: 23px;
+}
+
+.section-heading h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.section-heading p {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+/* 6. Task Form */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+#searchInput {
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    color: var(--text);
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+#searchInput:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.08);
+    outline: none;
+}
+
+.form-group input::placeholder,
+#searchInput::placeholder {
+    color: #a0a5b7;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 19px;
+}
+
+.primary-button {
+    margin-top: 23px;
+    padding: 12px 22px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.primary-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+.primary-button:active {
+    transform: scale(0.98);
+}
+
+/* 7. Task Controls and Filters */
+.task-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 23px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.filter-button {
+    padding: 8px 15px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.filter-button.active {
+    background: var(--primary-light);
+    color: var(--primary);
+    border-color: #e2dcff;
+}
+
+#searchInput {
+    max-width: 245px;
+    min-width: 0;
+}
+
+/* 8. Task List */
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+    animation: taskAppear 0.25s ease both;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.task-item:hover {
+    border-color: #d5cffc;
+    background: #fdfcff;
+}
+
+.task-item.completed {
+    background: #fafbfc;
+}
+
+.task-checkbox {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    accent-color: var(--success);
+    cursor: pointer;
+}
+
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-title {
+    font-size: 14px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.task-item.completed .task-title {
+    color: var(--text-muted);
+    text-decoration: line-through;
+}
+
+.task-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 6px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.category-badge[data-category="Work"] {
+    background: #eaf2ff;
+    color: #3169c9;
+}
+
+.category-badge[data-category="Personal"] {
+    background: #fff0e8;
+    color: #c76c31;
+}
+
+.category-badge[data-category="Study"] {
+    background: #e6f8f0;
+    color: #17865d;
+}
+
+.task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.task-action {
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: white;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.task-action:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.task-action.delete-button:hover {
+    border-color: #ffd4d8;
+    background: #fff1f2;
+    color: var(--danger);
+}
+
+.task-item.dragging {
+    opacity: 0.45;
+}
+
+.task-item.drag-over {
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* 9. Empty State */
+.empty-state {
+    text-align: center;
+    padding: 38px 15px;
+    color: var(--text-muted);
+}
+
+.empty-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 13px;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 25px;
+}
+
+.empty-state h3 {
+    color: var(--text);
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.empty-state p {
+    font-size: 13px;
+}
+
+.empty-state.hidden {
+    display: none;
+}
+
+/* 10. Footer */
+.app-footer {
+    padding: 15px 0 28px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* 11. Animations */
+@keyframes taskAppear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 12. Tablet Responsive Design */
+@media (max-width: 800px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .stat-card {
+        padding: 19px;
+    }
+
+    .panel {
+        padding: 23px;
+    }
+
+    .task-controls {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #searchInput {
+        max-width: none;
+    }
+}
+
+/* 13. Mobile Responsive Design */
+@media (max-width: 520px) {
+    .app-container {
+        width: 94%;
+    }
+
+    .app-header {
+        padding: 20px 0;
+        align-items: flex-start;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand h1 {
+        font-size: 21px;
+    }
+
+    .brand p {
+        font-size: 11px;
+    }
+
+    .date-display {
+        max-width: 115px;
+        font-size: 11px;
+    }
+
+    .welcome-section {
+        padding: 28px 0 20px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+
+    .stat-card h3 {
+        font-size: 25px;
+    }
+
+    .stat-card span {
+        font-size: 12px;
+    }
+
+    .panel {
+        padding: 18px;
+        margin-bottom: 17px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .primary-button {
+        width: 100%;
+    }
+
+    .filter-buttons {
+        gap: 3px;
+    }
+
+    .filter-button {
+        padding: 8px 11px;
+    }
+
+    .task-item {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding: 13px;
+    }
+
+    .task-content {
+        flex-basis: calc(100% - 38px);
+    }
+
+    .task-actions {
+        width: 100%;
+        padding-left: 31px;
+    }
+}
+
+/* 14. Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
