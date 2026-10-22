@@ -51,12 +51,20 @@ Note: A key used in browser-side JavaScript is not fully secret. A production de
 
 ## Screenshots
 
+### Main Dashboard
 ![Weather Dashboard](./assets/weather-dashboard.png)
+
+### Daytime View (Canada)
 ![Canada Weather Day](./assets/canada-weather-day.png)
+
+### Nighttime View (Lahore)
 ![Lahore Weather Night](./assets/lahore-weather-night.png)
-![Spelling Mistake Example](./assets/spelling-mistake.png)
+
+### Mobile Responsive Layout
 ![Weather Mobile View](./assets/weather-mobile.png)
 
+### Error Handling & Validation
+![Spelling Mistake Example](./assets/spelling-mistake.png)
 ## Author
 
 Muhammad Hamza
