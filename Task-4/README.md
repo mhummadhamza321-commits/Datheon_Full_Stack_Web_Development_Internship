@@ -42,7 +42,7 @@ A responsive e-commerce application built with React.js and Vite. The applicatio
 
 ### Order Placed
 
-![Order Placed](./screenshots/order-placed.png)
+![Order Placed](./src/screenshots/order-placed.png)
 
 ## Installation and Setup
 
