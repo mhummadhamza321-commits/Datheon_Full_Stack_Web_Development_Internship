@@ -31,7 +31,7 @@ Task-1/
 ├── assets/
 │   ├── README.txt
 │   ├── Muhammad-Hamza-CV.pdf
-│   └── [profile picture and project screenshots]
+│   
 └── README.md
 ```
 
