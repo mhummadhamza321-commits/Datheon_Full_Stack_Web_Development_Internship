@@ -60,23 +60,7 @@ The ZaikaGo repository and live demo link will be added when they are publicly a
 
 ## Deployment on Vercel
 
-1. Sign in to Vercel.
-2. Select **Add New → Project**.
-3. Import the GitHub repository containing this portfolio.
-4. Select **Other** as the framework preset, if prompted.
-5. Leave the build command and output directory empty unless Vercel requires different settings.
-6. Deploy the project and test the generated website URL.
-
-Pushes to the connected GitHub branch can trigger automatic deployments.
-
-**Live Demo:** Add the deployed URL here after deployment.
-
-## Internship Submission Status
-
-- **Task 1:** Personal Developer Portfolio — uploaded to GitHub.
-- **Task 2:** To be completed.
-- **Task 3:** To be completed.
-- **Task 4:** To be completed.
+https://my-project-eta-woad-16.vercel.app/
 
 ## Author
 
