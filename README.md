@@ -2,91 +2,63 @@
 
 Welcome to my **Datheon Full Stack Web Development Internship** repository! This repository documents my learning journey, practical assignments, and project development throughout the internship.
 
+A collection of projects completed during my Full Stack Web Development Internship at Datheon. This repository documents my practical learning, development tasks, and hands-on experience building web applications.
+
 ## 👨‍💻 About Me
 
 I'm Muhammad Hamza, a BS Information Technology graduate from Virtual University of Pakistan, interested in web development and building practical, user-friendly web applications.
 
 Through this internship, I aim to strengthen my frontend and full-stack development skills, improve my problem-solving abilities, and build projects that demonstrate my technical knowledge.
 
-## 🎯 Internship Objectives
+## About the Internship
 
-- Apply web development concepts through practical assignments.
-- Build responsive and user-friendly web interfaces.
-- Improve HTML, CSS, JavaScript, and other relevant development skills.
-- Practice clean code organization and project documentation.
-- Maintain a professional GitHub portfolio showcasing my progress.
-
-## 📂 Repository Structure
-
-```text
-Datheon_Full_Stack_Web_Development_Internship/
-│
-├── README.md
-├── Task-1/
-│   ├── index.html
-│   ├── style.css
-│   ├── assets/
-│   └── README.md
-│
-├── Task-2/
-│   └── README.md
-│
-├── Task-3/
-│   └── README.md
-│
-└── Task-4/
-    └── README.md
-```
-
-*Note: The structure above is illustrative. Update it as you add files and complete tasks.*
+The purpose of this repository is to demonstrate my practical web development skills through project-based tasks, including frontend development, JavaScript functionality, API integration, and interactive user interfaces.
 
 ## 🚀 Internship Tasks
 
 | Task | Project | Status |
 |---|---|---|
-| Task 1 | Personal Developer Portfolio | Completed |
-| Task 2 | To be updated | Pending |
-| Task 3 | To be updated | Pending |
-| Task 4 | To be updated | Pending |
+| Task 1 | 💻 Personal Developer Portfolio | Completed |
+| Task 2 | 📝 Dynamic Task Manager & Productivity Tracker | Completed |
+| Task 3 | ⛅ Real-Time Weather Forecast & Climate Telemetry App | Completed |
+| Task 4 | 🛒 E-Commerce Product Catalog & Interactive Shopping Cart | Completed |
 
 Each task has its own folder containing the project files and a dedicated README with its description, technologies, features, and instructions.
 
-## 🛠️ Technologies
+## Learning Outcomes
 
-**Currently used in Task 1:**
-- HTML5
-- CSS3
-- Git and GitHub
+Through the four tasks completed during the Datheon Full Stack Web Development Internship, I gained practical experience in the following areas:
 
-Additional technologies will be documented as I progress through the internship tasks.
+### Task 1 — 💻 Personal Developer Portfolio
+- Developed a responsive personal portfolio to showcase my profile, technical skills, and projects.
+- Practiced structuring web pages with HTML and styling them with CSS.
+- Improved my understanding of responsive layouts and professional portfolio presentation.
 
-## 📌 Task 1 — Personal Developer Portfolio
+### Task 2 — 📝 Dynamic Task Manager & Productivity Tracker
+- Strengthened my understanding of frontend development and website structure.
+- Practiced implementing interactive web features using JavaScript.
+- Improved my ability to organize project files and maintain readable code.
 
-The first task involved developing a personal portfolio website to present my profile, technical skills, projects, and professional information.
+### Task 3 — ⛅ Real-Time Weather Forecast & Climate Telemetry App
+- Gained practical experience working with external APIs and handling data in a web application.
+- Improved my understanding of asynchronous JavaScript, API requests, and displaying dynamic data.
+- Practiced error handling and debugging application issues.
 
-**Key elements:**
-- Personal introduction and profile picture
-- Technical skills section
-- Project showcase with screenshots
-- Resume/CV access
-- Contact and professional profile links
-- Responsive styling
+### Task 4 — 🛒 E-Commerce Product Catalog & Interactive Shopping Cart
+- Built a React.js application using Vite and the Fake Store API.
+- Practiced fetching and displaying product data from an external API.
+- Implemented interactive cart functionality, including adding items, updating quantities, removing products, and calculating totals.
+- Improved my understanding of React components, state management, and event handling.
+- Learned to document projects with screenshots and README instructions.
+- Verified the production build using Vite.
 
-**Project folder:** [`Task-1/`](./Task-1/)
-
-**Task documentation:** [View Task 1 README](./Task-1/README.md)
-
-## 📈 Learning Outcomes
-
-Throughout this internship, I aim to improve my ability to:
-
-- Develop and style web pages.
-- Organize project files professionally.
-- Document projects clearly.
-- Use GitHub to showcase practical work.
-- Build projects aligned with real-world development practices.
-
-This section will be updated as I complete additional tasks.
+### Overall Skills Developed
+- Frontend development with HTML, CSS, JavaScript, and React.js.
+- REST API integration and asynchronous data handling.
+- Interactive UI development and state management.
+- Debugging, testing, and production build verification.
+- GitHub repository management and project documentation.
+- Writing clear setup instructions and presenting projects professionally.
 
 ## 🔗 Connect With Me
 
